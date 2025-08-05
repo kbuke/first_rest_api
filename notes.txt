@@ -13,4 +13,28 @@ REST API
         /store/store_name/item  (it will have the following {"name": "Chair", "price": 15})
     To retrieve all stores and their items we send a GET request 
     To get particular store we also use a GET request, but to a specific store endpoint
-    
+
+Initial FLASK Set-Up
+    In Terminal run
+        python3.10 -m venv .venv 
+    To create a virtual environment 
+    Now tell VS Code which virtual environment to use by
+        cmd + shift + P 
+        Python: Select Interpreter
+        Find your one
+        Restart terminal
+    In our app.py we then:
+        from flask import Flask
+        app = Flask(__name__) # this is the last line of code 
+    This creates a Flask app
+    Any endpoints defined in this app, when we run the app it will make the endpoints available
+    We do this with
+        flask run
+    In the terminal, which looks for a file called app.py and a variable called app
+    We receive a warning which states that we should not use flask run when deploying the app
+    It shows that it is being run on
+        http://127.0.0.1:5000
+    Which is where we will send our requests for data
+    Pressing 
+        ctrl + c 
+    Stops the app
