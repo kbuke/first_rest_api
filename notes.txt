@@ -1,0 +1,16 @@
+REST API
+    Receive requests from a client, and respond with some data
+    Multiple applications/clients can make requests to the API 
+    This particular API will:
+        Create stores, each with a name, and list of stocked items
+        Create an item within a store, each with name and price
+        Retreive a list of all stores and their items
+        Given its name, retreive an individual store and all items
+        Given a store name, retreive only a list of items within it
+    When creating a store we shall send a POST request to the following endpoint
+        /store (it will have the following object/dict {"name": "My Store", "items": []})
+    And when creating items, we send a POST request to the following endpoint:
+        /store/store_name/item  (it will have the following {"name": "Chair", "price": 15})
+    To retrieve all stores and their items we send a GET request 
+    To get particular store we also use a GET request, but to a specific store endpoint
+    
