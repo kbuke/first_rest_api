@@ -38,3 +38,6 @@ Initial FLASK Set-Up
     Pressing 
         ctrl + c 
     Stops the app
+
+Your first API Endpoint 
+    Define where we store our data (usually in a database), but for now use Py list
