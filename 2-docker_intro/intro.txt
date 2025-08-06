@@ -1,0 +1,49 @@
+DOCKER CONTAINERS AND IMAGES
+    Virtual Machine is an emulation of a operating system
+    Say we want to run a Windows application on a Mac OS, we need a Virtual Machine
+    When running a VM you can tell it what hardware it has access to 
+
+    Docker Containers are similar, but work more efficiently with less flexibility
+    Usually run on a Linux system, due to using the Cloud 
+    Each container uses the existing operating system and run as a process within that OS 
+    Each container has its own storage and OS 
+
+    The OS is made of two main parts
+        KERNEL
+            usually interacts with controls and hardware 
+        FILES 
+    
+    Do not develop locally with MAC OS Containers, always use Linux
+    To do this we use 
+        Docker Desktop 
+    It is inefficient but that is fine for local work 
+
+    Docker Containers run everything except the KERNEL
+    Theyre based on IMAGES which specify what is run inside the container when it runs
+
+    DOCKER IMAGE is a snapshot of source code, libraries, tools etc except OS KERNEL
+    Many pre-built images so we don't have to build from scracth 
+
+
+DOCKER DESKTOP 
+    IMAGES
+        Create an Image to run a container 
+        Go to our stores project 
+        Restart terminal 
+        In terminal type:
+            docker 
+        This gives access to Docker CLI we use this to create image 
+        Create a Dockerfile (with said name)
+
+DOCKER COMPOSE 
+    allows us to start multiple containers at the same time
+    create a file called
+        docker-compose.yml 
+    this is a default name that docker compose looks for, for configuration
+    
+DEBUG FLASK APPS W DOCKER IN VS code
+    Set breakpoints by selecting line number
+    Before we run this line the code will stop before the line
+    Create a file:
+        docker-compose.debug.yml 
+    

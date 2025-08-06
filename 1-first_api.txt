@@ -1,3 +1,4 @@
+------------------------------------- YOUR FIRST REST API -------------------------------------
 REST API
     Receive requests from a client, and respond with some data
     Multiple applications/clients can make requests to the API 
@@ -41,3 +42,46 @@ Initial FLASK Set-Up
 
 Your first API Endpoint 
     Define where we store our data (usually in a database), but for now use Py list
+
+WHAT IS JSON
+    REST API's usually work with JSON data 
+    It is a long string of data
+    The content needs to follow a context 
+    Usually it is similar to a Py dictionary with a key-value pair 
+    Having it "un-prettified" gives less data to transfer, therefore best to leave
+    It is the data clients and servers use to interact
+
+HOW TO INTERACT WITH AND TEST API
+    This course makes us use the Insomnia program
+    It is very similar to Postman but simpler 
+    How to use:
+        Create Project
+        Create Collection (and name it)
+        Plus Icon
+        New HTTP Request 
+        Make requests like GET, POST etc
+        Enter url 
+    Make sure flask app is running and hit SEND and see data
+    Useful for making POST and other requests
+    Saves in a new request that you should change name to more specific
+
+CREATE STORES IN REST API   
+    To create we will receive JSON data which has the store info
+    We add this info to the list 
+    Create a new Insomnia Request for a POST request 
+    Create a POST request in app.py
+    In Insomnia, go to your new POST HTTP request, and select BODY
+    Select JSON format and put:
+        {
+            "name": "My Store 2"
+        }
+    When we send of the request it should now update accordingly. 
+
+CREATE ITEMS IN REST API
+    We will need the client to send a request to a specific store 
+    Can use a QUERY PARAMETER to interpolate name eg
+        http://127.0.0.1.5000/store?name=My Store
+
+
+------------------------------------- DOCKER -------------------------------------
+    
