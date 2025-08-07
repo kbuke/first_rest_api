@@ -83,5 +83,8 @@ CREATE ITEMS IN REST API
         http://127.0.0.1.5000/store?name=My Store
 
 
-------------------------------------- DOCKER -------------------------------------
-    
+---------------------------------------NOTE---------------------------------------
+Sometimes because of prev installations, it may not pick up python3.10.6
+In that case, run   
+    source .venv/bin/activate
+And install what you need

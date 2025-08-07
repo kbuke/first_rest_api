@@ -6,7 +6,11 @@ EXPOSE 5000
 # Go into folder within Dockerimg where we can put app.py
 WORKDIR /app 
 
-RUN pip install flask 
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt requirements.txt
+
+# Install all dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # This means copy everything into this directory (as L7 mv us into app)
 COPY . . 
