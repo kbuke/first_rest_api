@@ -1,0 +1,3 @@
+once set up here go to url:
+    http://localhost:5001/swagger-ui
+to play as need be
